@@ -1,0 +1,69 @@
+#CONFIG
+Host: 'null'
+Datenbank: 'null'
+Benutzer: 'null'
+Passwort: 'null'
+
+PlayerInTeam: '4'
+
+ResetMap: 'world'
+MapName: 'map'
+
+MySQL: true
+
+
+#Here the fun begins
+team:
+  red:
+    shortname: "Red"
+    color: "§c"
+    longname: "§cRed Team"
+    numid: "0000Red"
+  blue:
+    shortname: "Blue"
+    color: "§9"
+    longname: "§9Blue Team"
+    numid: "0001Blue"
+#No need to translate these, these are here just in case.
+warings:
+  methods: "§7Possible options:"
+  teams: "§7Possible teams:"
+  mysql: "§7MySQL ist derzeitig Deaktiviert."
+  breaking_wrong_crystal: "§7Du kannst den §bCore §7deines §bTeams §7nicht abbauen."
+info:
+  already_starting: "§cThe game is already starting."
+  started: "§aThe game has been started."
+#        %PLAYER% has broken down a §bCore §7 of the opponents!
+  core_break: " §7has broken down a §bCore §7 of the opponents!"
+stats:
+  header: "§7§m->-----------§r §aCores §7§m-----------<-"
+  line1: " §8» §aSpielername §8● §e"
+  line3: " §8» §7Gespielte Spiele §8● §e"
+  line4: " §8» §7Verlorene Spiele §8● §e"
+  line6: " §8» §7Ranking §8● §e"
+inventory:
+  name: "§eTeam Selection"
+event:
+  death:
+    killer: "You killed %PLAYER%",
+    victim: "You have been killed by %PLAYER%"
+    public: "%KILLED% have been killed by %KILLER%"
+    unknown: " §7died ._."
+  teamelimination: "Team %TEAM% was eliminated!"
+  player:
+    join: "§b%PLAYER% §7hat das Spiel betreten."
+    spectator: "Du bist dem Team §8Spectator §7beigetreten."
+    left: "%PLAYER% §7hat das Spiel verlassen. %PREFIX% Team %TEAM% §7hat noch %NUMBER% Spieler."
+    left_notingame: "§b%PLAYER% §7hat das Spiel verlassen"
+    spectator_respawn: "Du bist dem Team §8Spectator §7beigetreten."
+victory:
+  title: "§b§lCores"
+  subtitle: "%PREFIX% Team %TEAM% §7hat §agewonnen§8!"
+lobby:
+  teamchoosing: "§fWähle dein Team!",
+  missingplayer: "§cEs wird noch auf §eeinen §cweiteren Spieler gewartet!"
+  missingplayers: "§cEs wird noch auf §e%NUMBER% §cweitere Spieler gewartet!"
+  roundcountdown: "§7Die Runde beginnt in §e%NUMBER% §7Sekunden"
+  gamestart: "§7Das Spiel beginnt"
+  teleporte: "§eAlle werden auf die Map teleportiert!"
+  restart: "§7Das Spiel startet in §e%NUMBER% §7Sekunden neu."

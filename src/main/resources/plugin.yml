@@ -1,0 +1,9 @@
+name: Cores
+author: JavaSyntaxError
+version: 0.1
+main: me.javasyntaxerror.Cores
+
+commands:
+   cores:
+   start:
+   stats:
