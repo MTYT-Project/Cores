@@ -21,6 +21,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
+
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
@@ -48,7 +49,7 @@ public class Cores extends JavaPlugin {
 	public HashMap<String, TeamManager> teamManager = new HashMap<>();
 	public HashMap<String, PacketScoreboard> scoreBoard = Maps.newHashMap();
 	public HashMap<String, PlayerManager> playerManager = Maps.newHashMap();
-	public ScoreboardManager scoreboardManager = new ScoreboardManager();;
+	public ScoreboardManager scoreboardManager = new ScoreboardManager();
 
 	public List<String> teams = Lists.newArrayList();
 
@@ -171,7 +172,7 @@ public class Cores extends JavaPlugin {
 		teamManager.put(translation("team.blue.shortname","Blau"), new TeamManager(translation("team.blue.color", "§9"), 6, itemManager.getLeatherBoots(translation("team.blue.longname", "§9Team Blau"), Color.BLUE), Color.BLUE, translation("team.blue.numid", "0001Blau")));
 
 		maxPlayersInTeam = maxplayersinteam;
-		minPlayers = maxplayersinteam += 1;
+		minPlayers = maxplayersinteam + 1;
 
 		teams.addAll(Arrays.asList(translation("team.red.shortname", "Rot"), translation("team.blue.shortname", "Blau")));
 	}
