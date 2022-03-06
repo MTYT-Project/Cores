@@ -82,3 +82,10 @@ lobby:
   gamestart: "§7Das Spiel beginnt"
   teleporte: "§eAlle werden auf die Map teleportiert!"
   restart: "§7Das Spiel startet in §e%NUMBER% §7Sekunden neu."
+scoreboard:
+  lobby:
+    line1: " "
+    line2: "§fMap§8:"
+    line3: "§e"
+    line4: "  "
+    line5: "§fTeam§8:"

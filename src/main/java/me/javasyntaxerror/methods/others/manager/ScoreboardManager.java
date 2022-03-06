@@ -21,11 +21,11 @@ public class ScoreboardManager {
 				Cores.getInstance().scoreBoard.get(player.getName()).removeLine(i);
 			}
 
-			Cores.getInstance().scoreBoard.get(player.getName()).setLine(5, " ");
-			Cores.getInstance().scoreBoard.get(player.getName()).setLine(4, "§fMap§8:");
-			Cores.getInstance().scoreBoard.get(player.getName()).setLine(3, "§e" + Cores.getInstance().getConfig().getString("MapName"));
-			Cores.getInstance().scoreBoard.get(player.getName()).setLine(2, "  ");
-			Cores.getInstance().scoreBoard.get(player.getName()).setLine(1, "§fTeam§8:");
+			Cores.getInstance().scoreBoard.get(player.getName()).setLine(5, Cores.translation("scoreboard.lobby.line1", " "));
+			Cores.getInstance().scoreBoard.get(player.getName()).setLine(4, Cores.translation("scoreboard.lobby.line2", "§fMap§8:"));
+			Cores.getInstance().scoreBoard.get(player.getName()).setLine(3, Cores.translation("scoreboard.lobby.line3", "§e") + Cores.getInstance().getConfig().getString("MapName"));
+			Cores.getInstance().scoreBoard.get(player.getName()).setLine(2, Cores.translation("scoreboard.lobby.line4", "  "));
+			Cores.getInstance().scoreBoard.get(player.getName()).setLine(1, Cores.translation("scoreboard.lobby.line5", "§fTeam§8:"));
 			if (Cores.getInstance().team.get(player.getName()) != null) {
 				Cores.getInstance().scoreBoard.get(player.getName()).setLine(0, "§7" + Cores.getInstance().teamManager.get(Cores.getInstance().team.get(player.getName())).getPrefix() + Cores.getInstance().team.get(player.getName()));
 			} else {
