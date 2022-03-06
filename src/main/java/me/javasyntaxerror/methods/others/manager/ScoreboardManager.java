@@ -1,13 +1,17 @@
-package me.javasyntaxerror.methods.others.manager;
+/*
+ * Translation system designed and run by IToncek.
+ * Copyright (c) 2022.
+ */
 
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
-import org.bukkit.scoreboard.Team;
+package me.javasyntaxerror.methods.others.manager;
 
 import me.javasyntaxerror.Cores;
 import me.javasyntaxerror.methods.countdowns.InGame_Countdown;
 import me.javasyntaxerror.methods.others.PacketScoreboard;
 import me.javasyntaxerror.methods.others.team.TeamManager;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+import org.bukkit.scoreboard.Team;
 
 public class ScoreboardManager {
 
