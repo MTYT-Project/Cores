@@ -100,7 +100,7 @@ public class Cores extends JavaPlugin {
         }
     }
 
-    public static String replace (String src, String replace, String trg) {
+    public static String replace(String src, String replace, String trg) {
         return src.replace(replace, trg);
     }
 

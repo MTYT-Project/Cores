@@ -132,12 +132,12 @@ public class ScoreboardManager {
 
             if (teamManagerBlau.isRightCore()) {
                 if (right == 0) {
-                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(7, "§a✔ §fRightCore ");
+                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(7, Cores.translation("scoreboard.y") + Cores.translation("scoreboard.right_core"));
                 } else if (right == 1) {
-                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(7, "§6➤ §cRightCore ");
+                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(7, Cores.translation("scoreboard.arrow") + Cores.translation("scoreboard.right_core_c"));
                 }
             } else {
-                Cores.getInstance().scoreBoard.get(player.getName()).setLine(7, "§4✖ §fRightCore ");
+                Cores.getInstance().scoreBoard.get(player.getName()).setLine(7, Cores.translation("scoreboard.x") + Cores.translation("scoreboard.right_core"));
             }
         }
     }
