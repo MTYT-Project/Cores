@@ -51,7 +51,7 @@ public class ScoreboardManager {
             TeamManager teamManagerBlau = Cores.getInstance().teamManager.get("Blau");
 
             Cores.getInstance().scoreBoard.get(player.getName()).setLine(10, " ");
-            Cores.getInstance().scoreBoard.get(player.getName()).setLine(9, Cores.translation("team.blue.longname", "§9Blue Team"));
+            Cores.getInstance().scoreBoard.get(player.getName()).setLine(9, Cores.translation("team.blue.longname"));
             if (teamManagerBlau.isLeftCore()) {
                 Cores.getInstance().scoreBoard.get(player.getName()).setLine(8, Cores.translation("scoreboard.y") + Cores.translation("scoreboard.left_core"));
             } else {
@@ -63,19 +63,19 @@ public class ScoreboardManager {
                 Cores.getInstance().scoreBoard.get(player.getName()).setLine(7, Cores.translation("scoreboard.x") + Cores.translation("scoreboard.right_core"));
             }
             Cores.getInstance().scoreBoard.get(player.getName()).setLine(6, "  ");
-            Cores.getInstance().scoreBoard.get(player.getName()).setLine(5, "§cTeam Rot");
+            Cores.getInstance().scoreBoard.get(player.getName()).setLine(5, Cores.translation("team.red.longname"));
             if (teamManagerRot.isLeftCore()) {
-                Cores.getInstance().scoreBoard.get(player.getName()).setLine(4, "§a✔ §fLeftCore");
+                Cores.getInstance().scoreBoard.get(player.getName()).setLine(4, Cores.translation("scoreboard.y") + Cores.translation("scoreboard.left_core"));
             } else {
-                Cores.getInstance().scoreBoard.get(player.getName()).setLine(4, "§4✖ §fLeftCore");
+                Cores.getInstance().scoreBoard.get(player.getName()).setLine(4, Cores.translation("scoreboard.x") + Cores.translation("scoreboard.left_core"));
             }
             if (teamManagerRot.isRightCore()) {
-                Cores.getInstance().scoreBoard.get(player.getName()).setLine(3, "§a✔ §fRightCore");
+                Cores.getInstance().scoreBoard.get(player.getName()).setLine(3, Cores.translation("scoreboard.y") + Cores.translation("scoreboard.right_core"));
             } else {
-                Cores.getInstance().scoreBoard.get(player.getName()).setLine(3, "§4✖ §fRightCore");
+                Cores.getInstance().scoreBoard.get(player.getName()).setLine(3, Cores.translation("scoreboard.x") + Cores.translation("scoreboard.right_core"));
             }
             Cores.getInstance().scoreBoard.get(player.getName()).setLine(2, "   ");
-            Cores.getInstance().scoreBoard.get(player.getName()).setLine(1, "§fKills");
+            Cores.getInstance().scoreBoard.get(player.getName()).setLine(1, Cores.translation("scoreboard.kills"));
             Cores.getInstance().scoreBoard.get(player.getName()).setLine(0, "§e" + Cores.getInstance().playerManager.get(player.getName()).getKills());
         });
     }
@@ -89,24 +89,24 @@ public class ScoreboardManager {
 
             if (teamManagerRot.isLeftCore()) {
                 if (left == 0) {
-                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(4, "§a✔ §fLeftCore");
+                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(4,  Cores.translation("scoreboard.y") + Cores.translation("scoreboard.left_core"));
                 } else if (left == 1) {
-                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(4, "§6➤ §cLeftCore");
+                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(4, Cores.translation("scoreboard.x") + Cores.translation("scoreboard.left_core"));
                 }
             } else {
-                Cores.getInstance().scoreBoard.get(player.getName()).setLine(4, "§4✖ §fLeftCore");
+                Cores.getInstance().scoreBoard.get(player.getName()).setLine(4, Cores.translation("scoreboard.x") + Cores.translation("scoreboard.left_core"));
             }
         } else if (integer == 1) {
             Cores.getInstance().scoreBoard.get(player.getName()).removeLine(8);
 
             if (teamManagerBlau.isLeftCore()) {
                 if (left == 0) {
-                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(8, "§a✔ §fLeftCore ");
+                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(8, Cores.translation("scoreboard.y") + Cores.translation("scoreboard.left_core"));
                 } else if (left == 1) {
-                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(8, "§6➤ §cLeftCore ");
+                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(8, Cores.translation("scoreboard.arrow") + Cores.translation("scoreboard.left_core_c"));
                 }
             } else {
-                Cores.getInstance().scoreBoard.get(player.getName()).setLine(8, "§4✖ §fLeftCore ");
+                Cores.getInstance().scoreBoard.get(player.getName()).setLine(8, Cores.translation("scoreboard.x") + Cores.translation("scoreboard.left_core"));
             }
         }
     }
@@ -120,12 +120,12 @@ public class ScoreboardManager {
 
             if (teamManagerRot.isRightCore()) {
                 if (right == 0) {
-                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(3, "§a✔ §fRightCore");
+                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(3, Cores.translation("scoreboard.y") + Cores.translation("scoreboard.right_core"));
                 } else if (right == 1) {
-                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(3, "§6➤ §cRightCore");
+                    Cores.getInstance().scoreBoard.get(player.getName()).setLine(3, Cores.translation("scoreboard.arrow") + Cores.translation("scoreboard.right_core_c"));
                 }
             } else {
-                Cores.getInstance().scoreBoard.get(player.getName()).setLine(3, "§4✖ §fRightCore");
+                Cores.getInstance().scoreBoard.get(player.getName()).setLine(3, Cores.translation("scoreboard.x") + Cores.translation("scoreboard.right_core"));
             }
         } else if (integer == 1) {
             Cores.getInstance().scoreBoard.get(player.getName()).removeLine(7);

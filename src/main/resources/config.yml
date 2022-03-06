@@ -15,12 +15,10 @@ MySQL: true
 #Here the fun begins
 team:
   red:
-    shortname: "Red"
     color: "§c"
     longname: "§cRed Team"
     numid: "0000Red"
   blue:
-    shortname: "Blue"
     color: "§9"
     longname: "§9Blue Team"
     numid: "0001Blue"
@@ -85,6 +83,7 @@ lobby:
 scoreboard:
   x: "§4✖"
   y: "§a✔"
+  arrow: "§6➤"
   lobby:
     line1: " "
     line2: "§fMap§8:"
@@ -92,4 +91,7 @@ scoreboard:
     line4: "  "
     line5: "§fTeam§8:"
   left_core: "§fLeftCore "
+  left_core_c: "§cLeftCore "
   right_core: "§fRightCore "
+  right_core_c: "§cRightCore "
+  kills: "§fKills"
