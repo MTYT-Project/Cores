@@ -91,3 +91,5 @@ scoreboard:
     line3: "§e"
     line4: "  "
     line5: "§fTeam§8:"
+  left_core: "§fLeftCore "
+  right_core: "§fRightCore "

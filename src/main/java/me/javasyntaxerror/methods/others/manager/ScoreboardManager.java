@@ -53,14 +53,14 @@ public class ScoreboardManager {
             Cores.getInstance().scoreBoard.get(player.getName()).setLine(10, " ");
             Cores.getInstance().scoreBoard.get(player.getName()).setLine(9, Cores.translation("team.blue.longname", "§9Blue Team"));
             if (teamManagerBlau.isLeftCore()) {
-                Cores.getInstance().scoreBoard.get(player.getName()).setLine(8, "§a✔ §fLeftCore ");
+                Cores.getInstance().scoreBoard.get(player.getName()).setLine(8, Cores.translation("scoreboard.y") + Cores.translation("scoreboard.left_core"));
             } else {
-                Cores.getInstance().scoreBoard.get(player.getName()).setLine(8, "§4✖ §fLeftCore ");
+                Cores.getInstance().scoreBoard.get(player.getName()).setLine(8, Cores.translation("scoreboard.x") + Cores.translation("scoreboard.left_core"));
             }
             if (teamManagerBlau.isRightCore()) {
-                Cores.getInstance().scoreBoard.get(player.getName()).setLine(7, "§a✔ §fRightCore ");
+                Cores.getInstance().scoreBoard.get(player.getName()).setLine(7, Cores.translation("scoreboard.y") + Cores.translation("scoreboard.right_core"));
             } else {
-                Cores.getInstance().scoreBoard.get(player.getName()).setLine(7, "§4✖ §fRightCore ");
+                Cores.getInstance().scoreBoard.get(player.getName()).setLine(7, Cores.translation("scoreboard.x") + Cores.translation("scoreboard.right_core"));
             }
             Cores.getInstance().scoreBoard.get(player.getName()).setLine(6, "  ");
             Cores.getInstance().scoreBoard.get(player.getName()).setLine(5, "§cTeam Rot");
