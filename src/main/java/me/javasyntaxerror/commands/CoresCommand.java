@@ -26,7 +26,7 @@ public class CoresCommand implements CommandExecutor {
                 if (player.hasPermission("Cores.Admin")) {
                     if (args.length == 3) {
                         if (args[0].equalsIgnoreCase("set")) {
-                            List<String> teams = Arrays.asList(Cores.translation("team.red.shortname", "Rot"), Cores.translation("team.blue.shortname", "Blau"));
+                            List<String> teams = Arrays.asList("Rot", "Blau");
                             List<String> teamslittle = Arrays.asList("red", "blue");
 
                             if (teamslittle.contains(args[1].toLowerCase())) {

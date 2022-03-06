@@ -104,17 +104,16 @@ public class Cores extends JavaPlugin {
         return src.replace(replace, trg);
     }
 
-    public static String translation (String id, String defaultValue) {
-        FileConfiguration cfg = YamlConfiguration.loadConfiguration(new File("spigot.yml"));
-        if (cfg.getString(id) == null) {
+    public static String translation (String id) {
+        if (Cores.getInstance().getConfig().getString(id) == null) {
             return ChatColor.RED + "There was an error on our side, please contact an admin with this text: " + id + " and screenshot of this message. Thanks for your help :)";
         } else {
-            return cfg.getString(id, defaultValue);
+            return Cores.getInstance().getConfig().getString(id);
         }
     }
 
-    public static String translation(String id) {
-        return translation(id, "");
+    public static String translation(String id, String ignored) {
+        return translation(id);
     }
 
     public void onDisable () {
@@ -178,8 +177,8 @@ public class Cores extends JavaPlugin {
     private void setUpTeams () {
         int maxplayersinteam = Integer.parseInt(getConfig().getString("PlayerInTeam"));
 
-        teamManager.put(translation("team.red.shortname", "Rot"), new TeamManager(translation("team.red.color", "§c"), 2, itemManager.getLeatherBoots(translation("team.red.longname", "§cTeam Rot"), Color.RED), Color.RED, translation("team.red.numid", "0000Rot")));
-        teamManager.put(translation("team.blue.shortname", "Blau"), new TeamManager(translation("team.blue.color", "§9"), 6, itemManager.getLeatherBoots(translation("team.blue.longname", "§9Team Blau"), Color.BLUE), Color.BLUE, translation("team.blue.numid", "0001Blau")));
+        teamManager.put("Rot", new TeamManager(translation("team.red.color", "§c"), 2, itemManager.getLeatherBoots(translation("team.red.longname", "§cTeam Rot"), Color.RED), Color.RED, translation("team.red.numid", "0000Rot")));
+        teamManager.put("Blau", new TeamManager(translation("team.blue.color", "§9"), 6, itemManager.getLeatherBoots(translation("team.blue.longname", "§9Team Blau"), Color.BLUE), Color.BLUE, translation("team.blue.numid", "0001Blau")));
 
         maxPlayersInTeam = maxplayersinteam;
         minPlayers = maxplayersinteam + 1;

@@ -38,9 +38,9 @@ public class BlockChangeListener implements Listener {
         if (event.getBlock().getType() == Material.BEACON) {
             String playerTeam = Cores.getInstance().team.get(event.getPlayer().getName());
 
-            if (playerTeam.equalsIgnoreCase(Cores.translation("team.red.shortname", "Rot"))) {
+            if (playerTeam.equalsIgnoreCase("Rot")) {
                 if (event.getBlock().getLocation().equals(Cores.getInstance().locationManager.getLocation(event.getPlayer(), "blauleftcore"))) {
-                    Cores.getInstance().teamManager.get(Cores.translation("team.blue.shortname", "Blau")).setLeftCore(false);
+                    Cores.getInstance().teamManager.get("Blau").setLeftCore(false);
 
                     event.setCancelled(true);
                     event.getBlock().setType(Material.AIR);
@@ -51,12 +51,12 @@ public class BlockChangeListener implements Listener {
                         all.sendMessage(Cores.getInstance().prefix + "§b" + event.getPlayer().getName() + Cores.translation("info.core_break", " §7has broken down a §bCore §7 of the opponents!"));
                     }
 
-                    TeamManager teamManager = Cores.getInstance().teamManager.get(Cores.translation("team.blue.shortname", "Blau"));
+                    TeamManager teamManager = Cores.getInstance().teamManager.get("Blau");
                     if (! teamManager.isLeftCore() && ! teamManager.isRightCore()) {
-                        Cores.getInstance().teams.remove(Cores.translation("team.blue.shortname", "Blau"));
+                        Cores.getInstance().teams.remove("Blau");
                     }
                 } else if (event.getBlock().getLocation().equals(Cores.getInstance().locationManager.getLocation(event.getPlayer(), "blaurightcore"))) {
-                    Cores.getInstance().teamManager.get(Cores.translation("team.blue.shortname", "Blau")).setRightCore(false);
+                    Cores.getInstance().teamManager.get("Blau").setRightCore(false);
 
                     event.setCancelled(true);
                     event.getBlock().setType(Material.AIR);
@@ -67,17 +67,17 @@ public class BlockChangeListener implements Listener {
                         all.sendMessage(Cores.getInstance().prefix + "§b" + event.getPlayer().getName() + Cores.translation("info.core_break", " §7has broken down a §bCore §7 of the opponents!"));
                     }
 
-                    TeamManager teamManager = Cores.getInstance().teamManager.get(Cores.translation("team.blue.shortname", "Blau"));
+                    TeamManager teamManager = Cores.getInstance().teamManager.get("Blau");
                     if (! teamManager.isLeftCore() && ! teamManager.isRightCore()) {
-                        Cores.getInstance().teams.remove(Cores.translation("team.blue.shortname", "Blau"));
+                        Cores.getInstance().teams.remove("Blau");
                     }
                 } else {
                     event.getPlayer().sendMessage(Cores.getInstance().prefix + Cores.translation("warning.breaking_wrong_crystal", "§7Du kannst den §bCore §7deines §bTeams §7nicht abbauen."));
                     event.setCancelled(true);
                 }
-            } else if (playerTeam.equalsIgnoreCase(Cores.translation("team.blue.shortname", "Blau"))) {
+            } else if (playerTeam.equalsIgnoreCase("Blau")) {
                 if (event.getBlock().getLocation().equals(Cores.getInstance().locationManager.getLocation(event.getPlayer(), "rotleftcore"))) {
-                    Cores.getInstance().teamManager.get(Cores.translation("team.red.shortname", "Rot")).setLeftCore(false);
+                    Cores.getInstance().teamManager.get("Rot").setLeftCore(false);
 
                     event.setCancelled(true);
                     event.getBlock().setType(Material.AIR);
@@ -88,12 +88,12 @@ public class BlockChangeListener implements Listener {
                         all.sendMessage(Cores.getInstance().prefix + "§b" + event.getPlayer().getName() + Cores.translation("info.core_break", " §7has broken down a §bCore §7 of the opponents!"));
                     }
 
-                    TeamManager teamManager = Cores.getInstance().teamManager.get(Cores.translation("team.red.shortname", "Rot"));
+                    TeamManager teamManager = Cores.getInstance().teamManager.get("Rot");
                     if (! teamManager.isLeftCore() && ! teamManager.isRightCore()) {
-                        Cores.getInstance().teams.remove(Cores.translation("team.red.shortname", "Rot"));
+                        Cores.getInstance().teams.remove("Rot");
                     }
                 } else if (event.getBlock().getLocation().equals(Cores.getInstance().locationManager.getLocation(event.getPlayer(), "rotrightcore"))) {
-                    Cores.getInstance().teamManager.get(Cores.translation("team.red.shortname", "Rot")).setRightCore(false);
+                    Cores.getInstance().teamManager.get("Rot").setRightCore(false);
 
                     event.setCancelled(true);
                     event.getBlock().setType(Material.AIR);
@@ -104,9 +104,9 @@ public class BlockChangeListener implements Listener {
                         all.sendMessage(Cores.getInstance().prefix + "§b" + event.getPlayer().getName() + Cores.translation("info.core_break", " §7has broken down a §bCore §7 of the opponents!"));
                     }
 
-                    TeamManager teamManager = Cores.getInstance().teamManager.get(Cores.translation("team.red.shortname", "Rot"));
+                    TeamManager teamManager = Cores.getInstance().teamManager.get("Rot");
                     if (! teamManager.isLeftCore() && ! teamManager.isRightCore()) {
-                        Cores.getInstance().teams.remove(Cores.translation("team.red.shortname", "Rot"));
+                        Cores.getInstance().teams.remove("Rot");
                     }
                 } else {
                     event.setCancelled(true);
