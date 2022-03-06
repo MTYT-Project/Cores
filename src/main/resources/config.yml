@@ -33,7 +33,7 @@ warings:
 info:
   already_starting: "§cThe game is already starting."
   started: "§aThe game has been started."
-#        %PLAYER% has broken down a §bCore §7 of the opponents!
+  #        %PLAYER% has broken down a §bCore §7 of the opponents!
   core_break: " §7has broken down a §bCore §7 of the opponents!"
   location_set: "§7Die Location wurde gesetzt."
 stats:
@@ -83,6 +83,8 @@ lobby:
   teleporte: "§eAlle werden auf die Map teleportiert!"
   restart: "§7Das Spiel startet in §e%NUMBER% §7Sekunden neu."
 scoreboard:
+  x: "§4✖"
+  y: "§a✔"
   lobby:
     line1: " "
     line2: "§fMap§8:"
